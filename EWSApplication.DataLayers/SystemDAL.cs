@@ -28,7 +28,8 @@ namespace EWSApplication.DataLayers
                    password  = acc.password,
                    username = acc.username,
                    roleid = acc.roleid,
-                   facultyid = acc.facultyid
+                   facultyid = acc.facultyid,
+                   opentime = DateTime.Now
                 };
                 db.UserAccounts.Add(newacc);
                 db.SaveChanges();
