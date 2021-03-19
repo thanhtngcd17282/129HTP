@@ -59,15 +59,19 @@
                                     <small>Online</small>
                                 </div>
                             </li>
+
+                        </ul>
+                        <h3>Information</h3>
+                        <ul class="on-off-status">
                             <li>
                                 <div class="fgt-sec">
-                                    <input type="radio" name="cc" id="c6">
-                                    <label for="c6">
-                                        <span></span>
-                                    </label>
-                                    <small>Offline</small>
+
+                                    <small>Name:      <a href="#" title="">@ViewBag.userName</a></small>
+                                    <br><br>
+                                    <small>Faculty:      <a href="#" title="">@ViewBag.facultyname</a></small>
                                 </div>
                             </li>
+
                         </ul>
                         <h3>Custom Status</h3>
                         <div class="search_form">
@@ -76,7 +80,7 @@
                                 <button type="submit">Ok</button>
                             </form>
                         </div>
-                        
+
                         <h3 class="tc"><a href="@Url.Action("Logout", "Home")" title="">Logout</a></h3>
                     </div>
                 </div>
