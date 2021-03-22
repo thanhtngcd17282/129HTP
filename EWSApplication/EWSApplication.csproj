@@ -227,6 +227,7 @@
     <Content Include="Views\Manager\Statistics.cshtml" />
     <Content Include="Views\Manager\Review.cshtml" />
     <Content Include="Views\Manager\Download.cshtml" />
+    <Content Include="Views\Manager\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\" />

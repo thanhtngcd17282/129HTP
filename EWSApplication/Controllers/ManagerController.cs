@@ -24,6 +24,13 @@ namespace EWSApplication.Controllers
             List<Tag> obj = ManagerBLL.Manager_GetListTag();
             return View(obj);
         }
+
+        public ActionResult Edit (int id)
+
+        {
+            List<StructureAccountToRender> obj = SystemBLL.System_GetListInfoAccount();
+            return View(obj);
+        }
         public ActionResult DeleteTag(int id)
         {
             ManagerBLL.Manager_DeleteTag(id);

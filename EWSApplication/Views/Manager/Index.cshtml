@@ -17,18 +17,22 @@
             <div class="col col-3">email</div>
             <div class="col col-4">faculty</div>
             <div class="col col-5">role</div>
-            <div class="col col-6"></div>
+            <div class="col col-6">Edit User</div>
+            <div class="col col-6"> Delete</div>
         </li>
         @foreach (var acc in Model)
         {
-            <li class="table-row">
-                <div class="col col-1" data-label="User Id">@acc.userid</div>
-                <div class="col col-2" data-label="User Name">@acc.username</div>
-                <div class="col col-3" data-label="Email">@acc.email</div>
-                <div class="col col-4" data-label="faculty">@acc.facultyname</div>
-                <div class="col col-5" data-label="role">@acc.rolename</div>
-                <div class="col col-6" data-label="action"><a id="btn" href="@Url.Action("deleteaccount","manager", new { id=acc.userid})">X</a></div>
-            </li>
+    <li class="table-row">
+        <div class="col col-1" data-label="User Id">@acc.userid</div>
+        <div class="col col-2" data-label="User Name">@acc.username</div>
+        <div class="col col-3" data-label="Email">@acc.email</div>
+        <div class="col col-4" data-label="faculty">@acc.facultyname</div>
+        <div class="col col-5" data-label="role">@acc.rolename</div>
+        <div class="col col-6" data-label="action"><a id="btn" href="@Url.Action("EditUser","manager", new { id=acc.userid})">EditUser</a></div>
+
+
+        <div class="col col-6" data-label="action"><a id="btn" href="@Url.Action("deleteaccount","manager", new { id=acc.userid})">X</a></div>
+    </li>
 
         }
     </ul>
@@ -105,8 +109,9 @@
                 </form>
             </div>
 
-            <a href="#" title=""><i class="far fa-times-circle"></i></a>
-        </div>
-        </div>
+
+                    <a href="#" title=""><i class="far fa-times-circle"></i></a>
+                </div>
+            </div>
 </main>
 
