@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,29 @@ namespace EWSApplication.DataLayers
                    opentime = DateTime.Now
                 };
                 db.UserAccounts.Add(newacc);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateAccount(UserAccount acc)
+        {
+            try
+            {
+                UserAccount updateacc = new UserAccount()
+                {
+                    email = acc.email,
+                    password = acc.password,
+                    username = acc.username,
+                    roleid = acc.roleid,
+                    facultyid = acc.facultyid,
+                    opentime = DateTime.Now
+                };
+                db.UserAccounts.AddOrUpdate(updateacc);
                 db.SaveChanges();
                 return true;
             }

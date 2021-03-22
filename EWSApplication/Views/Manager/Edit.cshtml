@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<div class="post-popup pst-pj current animated fadeIn">
+    <div class="post-project current">
+        <h3>New Account</h3>
+        <div class="post-project-fields">
+            <form action="@Url.Action("Edit","Index")" method="post">
+                <div class="row">
+                    <div class="col-lg-12 no-pdd">
+                        <div class="sn-field">
+                            <input type="text" name="username" placeholder="Full Name">
+                            <i class="far fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 no-pdd">
+                        <div class="sn-field">
+                            <input type="text" name="email" placeholder="Email">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 no-pdd">
+                        <div class="sn-field">
+                            <select name="roleid">
+                                <option value="1">Admin</option>
+                                <option value="3">Student</option>
+                                <option value="4">Marketing Management</option>
+                                <option value="3">Marketing Coordinator</option>
+                            </select>
+                            <i class="fab fa-dropbox"></i>
+                            <span><i class="fa fa-ellipsis-h"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 no-pdd">
+                        <div class="sn-field">
+                            <select name="facultyid">
+                                <option value="1">Computing Sience</option>
+                                <option value="2">Business Administration</option>
+                                <option value="3">Graphic Design</option>
+                                <option value="4">Event Management</option>
+                                <option value="5">Marketing Management</option>
+                            </select>
+                            <i class="fab fa-dropbox"></i>
+                            <span><i class="fa fa-ellipsis-h"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 no-pdd">
+                        <div class="sn-field">
+                            <input type="password" name="password" placeholder="Password">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 no-pdd">
+                        <div class="sn-field">
+                            <input type="password" name="repeat-password" placeholder="Repeat Password">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 no-pdd">
+                        <div class="checky-sec st2">
+                            <div class="fgt-sec">
+                                <input type="checkbox" checked name="cc" id="c2">
+                                <label for="c2">
+                                    <span></span>
+                                </label>
+                                <small>Yes, I understand and agree to the workwise Terms &amp; Conditions.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 no-pdd">
+                        <button type="submit" value="submit">Get Started</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <a href="#" title=""><i class="far fa-times-circle"></i></a>
+    </div>
+</div>
